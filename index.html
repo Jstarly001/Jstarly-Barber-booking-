@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jstarly Barber Booking</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #111;
+      color: white;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: auto;
+    }
+
+    .header {
+      text-align: center;
+      padding: 30px 10px;
+    }
+
+    .header h1 {
+      font-size: 30px;
+      margin-bottom: 8px;
+    }
+
+    .header p {
+      color: #bbb;
+    }
+
+    .card {
+      background: #1d1d1d;
+      padding: 20px;
+      border-radius: 15px;
+      margin-bottom: 20px;
+    }
+
+    .service {
+      display: flex;
+      justify-content: space-between;
+      padding: 15px 0;
+      border-bottom: 1px solid #333;
+    }
+
+    .service:last-child {
+      border-bottom: none;
+    }
+
+    .price {
+      font-weight: bold;
+    }
+
+    h2 {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      margin-bottom: 6px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 13px;
+      border-radius: 8px;
+      border: none;
+      font-size: 16px;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 20px;
+      padding: 15px;
+      border: none;
+      border-radius: 8px;
+      background: #25D366;
+      color: white;
+      font-size: 17px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    .note {
+      text-align: center;
+      color: #999;
+      font-size: 13px;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="header">
+      <h1>💈 Jstarly Barber</h1>
+      <p>Book your haircut easily</p>
+    </div>
+
+    <div class="card">
+      <h2>Our Services</h2>
+
+      <div class="service">
+        <span>Haircut</span>
+        <span class="price">₦15,000</span>
+      </div>
+
+      <div class="service">
+        <span>Beard Trim</span>
+        <span class="price">₦5,000</span>
+      </div>
+
+      <div class="service">
+        <span>Haircut + Beard</span>
+        <span class="price">₦15,000</span>
+      </div>
+
+      <div class="service">
+        <span>Kids Cut</span>
+        <span class="price">₦5,000</span>
+      </div>
+
+      <div class="service">
+        <span>Shave</span>
+        <span class="price">₦5,000</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Book Appointment</h2>
+
+      <label>Your Name</label>
+      <input type="text" id="name" placeholder="Enter your name">
+
+      <label>Phone Number</label>
+      <input type="tel" id="phone" placeholder="08012345678">
+
+      <label>Choose Service</label>
+      <select id="service">
+        <option value="">Select a service</option>
+        <option>Haircut - ₦15,000</option>
+        <option>Beard Trim - ₦5,000</option>
+        <option>Haircut + Beard - ₦15,000</option>
+        <option>Kids Cut - ₦5,000</option>
+        <option>Shave - ₦5,000</option>
+      </select>
+
+      <label>Preferred Date</label>
+      <input type="date" id="date">
+
+      <label>Preferred Time</label>
+      <input type="time" id="time">
+
+      <button onclick="bookAppointment()">
+        Book Through WhatsApp
+      </button>
+
+      <p class="note">
+        Your booking details will be sent through WhatsApp.
+      </p>
+    </div>
+
+  </div>
+
+  <script>
+    function bookAppointment() {
+
+      const name = document.getElementById("name").value;
+      const phone = document.getElementById("phone").value;
+      const service = document.getElementById("service").value;
+      const date = document.getElementById("date").value;
+      const time = document.getElementById("time").value;
+
+      if (!name || !phone || !service || !date || !time) {
+        alert("Please fill in all the booking details.");
+        return;
+      }
+
+      const barberWhatsApp = "234XXXXXXXXXX";
+
+      const message =
+        "Hello Jstarly Barber,%0A%0A" +
+        "I want to book an appointment.%0A%0A" +
+        "Name: " + name + "%0A" +
+        "Phone: " + phone + "%0A" +
+        "Service: " + service + "%0A" +
+        "Date: " + date + "%0A" +
+        "Time: " + time;
+
+      window.open(
+        "https://wa.me/" + barberWhatsApp + "?text=" + message,
+        "_blank"
+      );
+    }
+  </script>
+
+</body>
+</html>
