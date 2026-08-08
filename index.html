@@ -3,47 +3,115 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jstarly Barber</title>
+
+<title>Jstarly Barber | Professional Grooming</title>
 
 <style>
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
-  background: #111;
-  color: white;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
   font-family: Arial, sans-serif;
+  background: #0b0b0b;
+  color: #fff;
+  line-height: 1.6;
 }
 
 header {
-  background: #000;
+  background: linear-gradient(135deg, #000, #1a1a1a);
+  padding: 25px 20px 80px;
   text-align: center;
-  padding: 50px 20px;
 }
 
-header h1 {
-  font-size: 40px;
-  margin: 0 0 10px;
+nav {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-header p {
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 18px;
+  font-size: 14px;
+}
+
+.hero {
+  max-width: 800px;
+  margin: 80px auto 0;
+}
+
+.hero .icon {
+  font-size: 55px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin: 10px 0;
+}
+
+.hero h1 span {
+  color: #d4af37;
+}
+
+.hero p {
   color: #bbb;
-  font-size: 17px;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.button {
+  display: inline-block;
+  background: #d4af37;
+  color: #000;
+  padding: 15px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .container {
-  max-width: 700px;
+  max-width: 900px;
   margin: auto;
-  padding: 35px 20px;
+  padding: 70px 20px;
 }
 
-h2 {
+.section-title {
   text-align: center;
-  margin-bottom: 25px;
+  font-size: 32px;
+  margin-bottom: 35px;
+}
+
+.about {
+  text-align: center;
+  max-width: 700px;
+  margin: auto;
+  color: #bbb;
+}
+
+.services {
+  display: grid;
+  gap: 15px;
 }
 
 .service {
-  background: #1d1d1d;
-  padding: 20px;
-  margin-bottom: 14px;
+  background: #171717;
+  border: 1px solid #292929;
+  padding: 22px;
   border-radius: 14px;
   display: flex;
   justify-content: space-between;
@@ -56,28 +124,31 @@ h2 {
 }
 
 .price {
+  color: #d4af37;
   font-weight: bold;
-  font-size: 17px;
 }
 
 .booking {
-  background: #1d1d1d;
-  padding: 25px;
-  border-radius: 15px;
-  margin-top: 35px;
+  background: #171717;
+  padding: 30px;
+  border-radius: 18px;
+  max-width: 650px;
+  margin: auto;
 }
 
 label {
   display: block;
-  margin: 15px 0 7px;
+  margin: 16px 0 7px;
+  color: #ddd;
 }
 
-input, select {
+input,
+select {
   width: 100%;
-  padding: 14px;
-  border: 0;
+  padding: 15px;
+  border: 1px solid #333;
   border-radius: 9px;
-  background: #333;
+  background: #252525;
   color: white;
   font-size: 16px;
 }
@@ -86,30 +157,65 @@ button {
   width: 100%;
   margin-top: 25px;
   padding: 16px;
-  border: 0;
+  border: none;
   border-radius: 30px;
   background: #25D366;
   color: white;
   font-size: 17px;
   font-weight: bold;
+  cursor: pointer;
 }
 
-.info {
-  background: #1d1d1d;
-  margin-top: 30px;
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.info-card {
+  background: #171717;
   padding: 25px;
   border-radius: 15px;
   text-align: center;
 }
 
-.info p {
-  color: #ccc;
+.info-card h3 {
+  color: #d4af37;
+  margin-bottom: 8px;
+}
+
+.info-card p {
+  color: #bbb;
 }
 
 footer {
   text-align: center;
+  background: #000;
   color: #777;
-  padding: 30px;
+  padding: 30px 15px;
+}
+
+@media (max-width: 650px) {
+  nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav a {
+    margin: 0 7px;
+  }
+
+  .hero {
+    margin-top: 60px;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
 }
 </style>
 </head>
@@ -117,13 +223,58 @@ footer {
 <body>
 
 <header>
-<h1>💈 Jstarly Barber</h1>
-<p>Clean cuts. Sharp looks. Professional grooming.</p>
+
+<nav>
+<div class="logo">💈 JSTarly Barber</div>
+
+<div>
+<a href="#services">Services</a>
+<a href="#booking">Book</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+
+<div class="hero">
+
+<div class="icon">💈</div>
+
+<h1>Look Sharp.<br><span>Feel Fresh.</span></h1>
+
+<p>
+Professional barbering and grooming services
+for a clean, confident look.
+</p>
+
+<a href="#booking" class="button">Book Appointment</a>
+
+</div>
+
 </header>
 
-<div class="container">
 
-<h2>Our Services</h2>
+<section class="container">
+
+<h2 class="section-title">About Jstarly Barber</h2>
+
+<div class="about">
+
+<p>
+Welcome to Jstarly Barber — your destination for clean,
+sharp and professional grooming. We provide quality
+haircuts, beard grooming and shaving services for men
+and kids.
+</p>
+
+</div>
+
+</section>
+
+
+<section class="container" id="services">
+
+<h2 class="section-title">Our Services</h2>
+
+<div class="services">
 
 <div class="service">
 <span class="service-name">Haircut</span>
@@ -150,20 +301,33 @@ footer {
 <span class="price">₦5,000</span>
 </div>
 
-<div class="booking">
+</div>
 
-<h2>Book an Appointment</h2>
+</section>
+
+
+<section class="container" id="booking">
+
+<h2 class="section-title">Book an Appointment</h2>
+
+<div class="booking">
 
 <label>Your Name</label>
 <input type="text" id="name" placeholder="Enter your name">
 
+<label>Phone Number</label>
+<input type="tel" id="phone" placeholder="Enter your phone number">
+
 <label>Choose Service</label>
+
 <select id="service">
+
 <option>Haircut - ₦15,000</option>
 <option>Beard Trim - ₦5,000</option>
 <option>Haircut + Beard - ₦15,000</option>
 <option>Kids Cut - ₦5,000</option>
 <option>Shave - ₦5,000</option>
+
 </select>
 
 <label>Preferred Date</label>
@@ -172,47 +336,82 @@ footer {
 <label>Preferred Time</label>
 <input type="time" id="time">
 
-<button onclick="bookAppointment()">📲 Book Appointment on WhatsApp</button>
+<button onclick="bookAppointment()">
+📲 Book Appointment on WhatsApp
+</button>
 
 </div>
 
-<div class="info">
-<h2>Contact</h2>
-<p>💈 Professional Barber Services</p>
-<p>📱 WhatsApp: 09159241163</p>
-<p>📅 Appointments available</p>
+</section>
+
+
+<section class="container" id="contact">
+
+<h2 class="section-title">Visit & Contact</h2>
+
+<div class="info-grid">
+
+<div class="info-card">
+<h3>📍 Location</h3>
+<p>Location coming soon</p>
+</div>
+
+<div class="info-card">
+<h3>🕐 Opening Hours</h3>
+<p>Monday - Saturday</p>
+<p>9:00 AM - 8:00 PM</p>
+</div>
+
+<div class="info-card">
+<h3>📱 WhatsApp</h3>
+<p>09159241163</p>
 </div>
 
 </div>
+
+</section>
+
 
 <footer>
-©️ 2026 Jstarly Barber. All rights reserved.
+
+<p>©️ 2026 Jstarly Barber. All rights reserved.</p>
+<p>Professional grooming. Sharp results.</p>
+
 </footer>
 
+
 <script>
+
 function bookAppointment() {
 
 var name = document.getElementById("name").value;
+var phone = document.getElementById("phone").value;
 var service = document.getElementById("service").value;
 var date = document.getElementById("date").value;
 var time = document.getElementById("time").value;
 
-if (name === "" || date === "" || time === "") {
-alert("Please enter your name, date and time.");
+if (name === "" || phone === "" || date === "" || time === "") {
+
+alert("Please fill in your name, phone number, date and time.");
+
 return;
+
 }
 
 var message =
 "Hello Jstarly Barber!%0A%0A" +
 "I want to book an appointment.%0A%0A" +
 "Name: " + encodeURIComponent(name) + "%0A" +
+"Phone: " + encodeURIComponent(phone) + "%0A" +
 "Service: " + encodeURIComponent(service) + "%0A" +
 "Date: " + encodeURIComponent(date) + "%0A" +
 "Time: " + encodeURIComponent(time);
 
 window.location.href =
 "https://wa.me/2349159241163?text=" + message;
+
 }
+
 </script>
 
 </body>
