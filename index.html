@@ -1,96 +1,219 @@
-html
-    }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jstarly Barber</title>
 
-    header h1 {
-      font-size: 42px;
-      margin-bottom: 10px;
-    }
+<style>
+body {
+  margin: 0;
+  background: #111;
+  color: white;
+  font-family: Arial, sans-serif;
+}
 
-    header p {
-      color: #bbb;
-      font-size: 18px;
-    }
+header {
+  background: #000;
+  text-align: center;
+  padding: 50px 20px;
+}
 
-    .container {
-      max-width: 700px;
-      margin: auto;
-      padding: 30px 20px;
-    }
+header h1 {
+  font-size: 40px;
+  margin: 0 0 10px;
+}
 
-    h2 {
-      text-align: center;
-      margin-bottom: 25px;
-      font-size: 28px;
-    }
+header p {
+  color: #bbb;
+  font-size: 17px;
+}
 
-    .service {
-      background: #1d1d1d;
-      padding: 18px;
-      margin: 12px 0;
-      border-radius: 12px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+.container {
+  max-width: 700px;
+  margin: auto;
+  padding: 35px 20px;
+}
 
-    .service strong {
-      font-size: 17px;
-    }
+h2 {
+  text-align: center;
+  margin-bottom: 25px;
+}
 
-    .price {
-      font-weight: bold;
-    }
+.service {
+  background: #1d1d1d;
+  padding: 20px;
+  margin-bottom: 14px;
+  border-radius: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-    .booking {
-      text-align: center;
-      margin-top: 35px;
-    }
+.service-name {
+  font-weight: bold;
+  font-size: 17px;
+}
 
-    .booking-button {
-      display: inline-block;
-      background: #25D366;
-      color: white;
-      text-decoration: none;
-      padding: 16px 30px;
-      border-radius: 30px;
-      font-size: 18px;
-      font-weight: bold;
-    }
+.price {
+  font-weight: bold;
+  font-size: 17px;
+}
 
-    .info {
-      margin-top: 45px;
-      background: #1d1d1d;
-      padding: 25px;
-      border-radius: 15px;
-      text-align: center;
-    }
+.booking {
+  background: #1d1d1d;
+  padding: 25px;
+  border-radius: 15px;
+  margin-top: 35px;
+}
 
-    .info p {
-      margin: 8px 0;
-      color: #ccc;
-    }
+label {
+  display: block;
+  margin: 15px 0 7px;
+}
 
-    footer {
-      text-align: center;
-      padding: 30px 15px;
-      color: #777;
-      font-size: 14px;
-    }
-  </style>
+input, select {
+  width: 100%;
+  padding: 14px;
+  border: 0;
+  border-radius: 9px;
+  background: #333;
+  color: white;
+  font-size: 16px;
+}
+
+button {
+  width: 100%;
+  margin-top: 25px;
+  padding: 16px;
+  border: 0;
+  border-radius: 30px;
+  background: #25D366;
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.info {
+  background: #1d1d1d;
+  margin-top: 30px;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.info p {
+  color: #ccc;
+}
+
+footer {
+  text-align: center;
+  color: #777;
+  padding: 30px;
+}
+</style>
 </head>
 
 <body>
 
-  <header>
-    <h1>💈 Jstarly Barber</h1>
-    <p>Clean cuts. Sharp looks. Professional grooming.</p>
-  </header>
+<header>
+<h1>💈 Jstarly Barber</h1>
+<p>Clean cuts. Sharp looks. Professional grooming.</p>
+</header>
 
-  <div class="container">
+<div class="container">
 
-    <h2>Our Services</h2>
+<h2>Our Services</h2>
 
-    <div class="service">
-      <strong>Haircut</strong>
-      <span class="price">₦15,000</span>
-    </div>
+<div class="service">
+<span class="service-name">Haircut</span>
+<span class="price">₦15,000</span>
+</div>
+
+<div class="service">
+<span class="service-name">Beard Trim</span>
+<span class="price">₦5,000</span>
+</div>
+
+<div class="service">
+<span class="service-name">Haircut + Beard</span>
+<span class="price">₦15,000</span>
+</div>
+
+<div class="service">
+<span class="service-name">Kids Cut</span>
+<span class="price">₦5,000</span>
+</div>
+
+<div class="service">
+<span class="service-name">Shave</span>
+<span class="price">₦5,000</span>
+</div>
+
+<div class="booking">
+
+<h2>Book an Appointment</h2>
+
+<label>Your Name</label>
+<input type="text" id="name" placeholder="Enter your name">
+
+<label>Choose Service</label>
+<select id="service">
+<option>Haircut - ₦15,000</option>
+<option>Beard Trim - ₦5,000</option>
+<option>Haircut + Beard - ₦15,000</option>
+<option>Kids Cut - ₦5,000</option>
+<option>Shave - ₦5,000</option>
+</select>
+
+<label>Preferred Date</label>
+<input type="date" id="date">
+
+<label>Preferred Time</label>
+<input type="time" id="time">
+
+<button onclick="bookAppointment()">📲 Book Appointment on WhatsApp</button>
+
+</div>
+
+<div class="info">
+<h2>Contact</h2>
+<p>💈 Professional Barber Services</p>
+<p>📱 WhatsApp: 09159241163</p>
+<p>📅 Appointments available</p>
+</div>
+
+</div>
+
+<footer>
+©️ 2026 Jstarly Barber. All rights reserved.
+</footer>
+
+<script>
+function bookAppointment() {
+
+var name = document.getElementById("name").value;
+var service = document.getElementById("service").value;
+var date = document.getElementById("date").value;
+var time = document.getElementById("time").value;
+
+if (name === "" || date === "" || time === "") {
+alert("Please enter your name, date and time.");
+return;
+}
+
+var message =
+"Hello Jstarly Barber!%0A%0A" +
+"I want to book an appointment.%0A%0A" +
+"Name: " + encodeURIComponent(name) + "%0A" +
+"Service: " + encodeURIComponent(service) + "%0A" +
+"Date: " + encodeURIComponent(date) + "%0A" +
+"Time: " + encodeURIComponent(time);
+
+window.location.href =
+"https://wa.me/2349159241163?text=" + message;
+}
+</script>
+
+</body>
+</html>
