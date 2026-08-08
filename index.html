@@ -1,8 +1,12 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>JSTARLY BLACK LABEL | Luxury Cuts & Grooming</title><style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>JSTARLY BLACK LABEL | Luxury Cuts & Grooming</title>
+
+<style>
 *{
   box-sizing:border-box;
   margin:0;
@@ -19,8 +23,6 @@ body{
   color:#f5f5f5;
   line-height:1.6;
 }
-
-/* HEADER */
 
 header{
   min-height:100vh;
@@ -55,8 +57,6 @@ nav a{
 nav a:hover{
   color:#d4af37;
 }
-
-/* HERO */
 
 .hero{
   max-width:850px;
@@ -104,15 +104,11 @@ nav a:hover{
   text-decoration:none;
   font-weight:bold;
   letter-spacing:1px;
-  transition:.3s;
 }
 
 .gold-button:hover{
   background:#f0d76a;
-  transform:translateY(-2px);
 }
-
-/* GENERAL */
 
 .container{
   max-width:1000px;
@@ -134,8 +130,6 @@ nav a:hover{
   margin-bottom:40px;
 }
 
-/* ABOUT */
-
 .about{
   max-width:720px;
   margin:auto;
@@ -143,8 +137,6 @@ nav a:hover{
   color:#aaa;
   font-size:17px;
 }
-
-/* SERVICES */
 
 .services{
   display:grid;
@@ -159,12 +151,6 @@ nav a:hover{
   justify-content:space-between;
   align-items:center;
   border-radius:5px;
-  transition:.3s;
-}
-
-.service:hover{
-  border-color:#d4af37;
-  transform:translateY(-2px);
 }
 
 .service-name{
@@ -203,7 +189,7 @@ nav a:hover{
 }
 
 .gallery-item:hover img{
-  transform:scale(1.05);
+  transform:scale(1.04);
 }
 
 /* BOOKING */
@@ -214,8 +200,7 @@ nav a:hover{
   background:#111;
   border:1px solid #292929;
   padding:35px;
-  border-radius:8px;
-  box-shadow:0 15px 40px rgba(0,0,0,.4);
+  border-radius:6px;
 }
 
 label{
@@ -241,38 +226,27 @@ select:focus{
   border-color:#d4af37;
 }
 
-/* PREMIUM WHATSAPP BUTTON */
+/* WHATSAPP BUTTON */
 
 .whatsapp-button{
   width:100%;
-  margin-top:30px;
-  padding:20px 25px;
-  border:1px solid rgba(255,255,255,0.15);
-  border-radius:8px;
-  background:linear-gradient(135deg,#25D366,#128C7E);
+  margin-top:25px;
+  padding:18px;
+  border:none;
+  border-radius:6px;
+  background:#25D366;
   color:white;
   font-size:18px;
   font-weight:bold;
-  letter-spacing:1px;
+  letter-spacing:.5px;
   cursor:pointer;
-
-  box-shadow:
-    0 8px 25px rgba(37,211,102,0.20),
-    inset 0 1px 0 rgba(255,255,255,0.20);
-
-  transition:all .3s ease;
+  box-shadow:0 5px 18px rgba(37,211,102,.18);
+  transition:.3s ease;
 }
 
 .whatsapp-button:hover{
-  transform:translateY(-3px);
-
-  box-shadow:
-    0 12px 30px rgba(37,211,102,0.35),
-    inset 0 1px 0 rgba(255,255,255,0.25);
-}
-
-.whatsapp-button:active{
-  transform:translateY(0);
+  background:#1ebe5d;
+  transform:translateY(-2px);
 }
 
 /* CONTACT */
@@ -289,11 +263,6 @@ select:focus{
   padding:28px 20px;
   text-align:center;
   border-radius:5px;
-  transition:.3s;
-}
-
-.info-card:hover{
-  border-color:#d4af37;
 }
 
 .info-card .icon{
@@ -309,8 +278,6 @@ select:focus{
 .info-card p{
   color:#aaa;
 }
-
-/* SOCIAL */
 
 .social{
   text-align:center;
@@ -328,8 +295,6 @@ select:focus{
   color:#f0d76a;
 }
 
-/* FOOTER */
-
 footer{
   background:#000;
   border-top:1px solid #222;
@@ -341,8 +306,6 @@ footer{
 footer strong{
   color:#d4af37;
 }
-
-/* MOBILE */
 
 @media(max-width:700px){
 
@@ -367,10 +330,6 @@ footer strong{
     font-size:17px;
   }
 
-  .hero p{
-    font-size:15px;
-  }
-
   .gallery{
     grid-template-columns:repeat(2,1fr);
     gap:10px;
@@ -383,217 +342,327 @@ footer strong{
   .booking-box{
     padding:25px 18px;
   }
-
-  .whatsapp-button{
-    font-size:17px;
-    padding:19px;
-  }
-
 }
+</style>
+</head>
 
-</style></head><body><!-- HEADER --><header><nav><div class="logo">
-JSTARLY BLACK LABEL
-</div><div><a href="#about">About</a>
+<body>
 
+<header>
+
+<nav>
+
+<div class="logo">JSTARLY BLACK LABEL</div>
+
+<div>
+<a href="#about">About</a>
 <a href="#services">Services</a>
-
 <a href="#work">Our Work</a>
-
 <a href="#booking">Book</a>
-
 <a href="#contact">Contact</a>
+</div>
 
-</div></nav><div class="hero"><div class="badge">
-EST. • PREMIUM GROOMING
-</div><h1>
-JSTARLY <span>BLACK LABEL</span>
-</h1><h2>
-Luxury Cuts • Grooming • Home Service
-</h2><p>
+</nav>
+
+<div class="hero">
+
+<div class="badge">EST. • PREMIUM GROOMING</div>
+
+<h1>JSTARLY <span>BLACK LABEL</span></h1>
+
+<h2>Luxury Cuts • Grooming • Home Service</h2>
+
+<p>
 Premium grooming brought directly to you.
 Experience clean cuts, refined grooming and
 professional service from the comfort of your home.
-</p><a href="#booking" class="gold-button">
+</p>
+
+<a href="#booking" class="gold-button">
 BOOK AN APPOINTMENT
-</a></div></header><!-- ABOUT --><section class="container" id="about"><div class="section-label">
-THE BLACK LABEL EXPERIENCE
-</div><h2 class="section-title">
+</a>
+
+</div>
+
+</header>
+
+
+<!-- ABOUT -->
+
+<section class="container" id="about">
+
+<div class="section-label">THE BLACK LABEL EXPERIENCE</div>
+
+<h2 class="section-title">
 Luxury Grooming, Wherever You Are
-</h2><div class="about"><p>
+</h2>
+
+<div class="about">
+
+<p>
 JSTARLY BLACK LABEL delivers premium barbering and
 grooming services with attention to detail, style and
 professionalism. No need to travel to a salon —
 we bring the grooming experience directly to your home.
-</p></div></section><!-- SERVICES --><section class="container" id="services"><div class="section-label">
-OUR SERVICES
-</div><h2 class="section-title">
-Premium Grooming
-</h2><div class="services"><div class="service"><span class="service-name">
-Haircut
-</span><span class="price">
-₦15,000
-</span></div><div class="service"><span class="service-name">
-Beard Trim
-</span><span class="price">
-₦5,000
-</span></div><div class="service"><span class="service-name">
-Haircut + Beard
-</span><span class="price">
-₦15,000
-</span></div><div class="service"><span class="service-name">
-Kids Cut
-</span><span class="price">
-₦5,000
-</span></div><div class="service"><span class="service-name">
-Shave
-</span><span class="price">
-₦5,000
-</span></div></div></section><!-- GALLERY --><section class="container" id="work"><div class="section-label">
-OUR WORK
-</div><h2 class="section-title">
+</p>
+
+</div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section class="container" id="services">
+
+<div class="section-label">OUR SERVICES</div>
+
+<h2 class="section-title">Premium Grooming</h2>
+
+<div class="services">
+
+<div class="service">
+<span class="service-name">Haircut</span>
+<span class="price">₦15,000</span>
+</div>
+
+<div class="service">
+<span class="service-name">Beard Trim</span>
+<span class="price">₦5,000</span>
+</div>
+
+<div class="service">
+<span class="service-name">Haircut + Beard</span>
+<span class="price">₦15,000</span>
+</div>
+
+<div class="service">
+<span class="service-name">Kids Cut</span>
+<span class="price">₦5,000</span>
+</div>
+
+<div class="service">
+<span class="service-name">Shave</span>
+<span class="price">₦5,000</span>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- OUR WORK -->
+
+<section class="container" id="work">
+
+<div class="section-label">OUR WORK</div>
+
+<h2 class="section-title">
 Precision. Style. Confidence.
-</h2><div class="gallery"><div class="gallery-item"><img
+</h2>
+
+<div class="gallery">
+
+<div class="gallery-item">
+<img
 src="794A64E8-BF44-44F0-BC08-99DB2775D89E.png"
-alt="JSTARLY BLACK LABEL haircut"
+alt="JSTARLY BLACK LABEL haircut">
+</div>
 
-«»
-
-</div><div class="gallery-item"><img
+<div class="gallery-item">
+<img
 src="0E95AEAB-842F-442E-93B7-240AEAF8E9F7.png"
-alt="JSTARLY BLACK LABEL grooming"
+alt="JSTARLY BLACK LABEL grooming">
+</div>
 
-«»
-
-</div><div class="gallery-item"><img
+<div class="gallery-item">
+<img
 src="IMG_6244.jpeg"
-alt="JSTARLY BLACK LABEL haircut"
+alt="JSTARLY BLACK LABEL haircut">
+</div>
 
-«»
-
-</div><div class="gallery-item"><img
+<div class="gallery-item">
+<img
 src="IMG_6252.jpeg"
-alt="JSTARLY BLACK LABEL grooming"
+alt="JSTARLY BLACK LABEL grooming">
+</div>
 
-«»
-
-</div><div class="gallery-item"><img
+<div class="gallery-item">
+<img
 src="8F09D3E6-1CB2-4C22-9663-E53FCF6ED73E.png"
-alt="JSTARLY BLACK LABEL haircut"
+alt="JSTARLY BLACK LABEL haircut">
+</div>
 
-«»
+</div>
 
-</div></div></section><!-- BOOKING --><section class="container" id="booking"><div class="section-label">
-RESERVE YOUR TIME
-</div><h2 class="section-title">
+</section>
+
+
+<!-- BOOKING -->
+
+<section class="container" id="booking">
+
+<div class="section-label">RESERVE YOUR TIME</div>
+
+<h2 class="section-title">
 Book an Appointment
-</h2><div class="booking-box"><label>
-Your Name
-</label><input
+</h2>
+
+<div class="booking-box">
+
+<label>Your Name</label>
+
+<input
 type="text"
 id="name"
 placeholder="Enter your name"
+>
 
-«»
+<label>Phone Number</label>
 
-<label>
-Phone Number
-</label><input
+<input
 type="tel"
 id="phone"
 placeholder="Enter your phone number"
+>
 
-«»
+<label>Choose Service</label>
 
-<label>
-Choose Service
-</label><select id="service"><option>
-Haircut - ₦15,000
-</option><option>
-Beard Trim - ₦5,000
-</option><option>
-Haircut + Beard - ₦15,000
-</option><option>
-Kids Cut - ₦5,000
-</option><option>
-Shave - ₦5,000
-</option></select><label>
-Preferred Date
-</label><input
+<select id="service">
+
+<option>Haircut - ₦15,000</option>
+<option>Beard Trim - ₦5,000</option>
+<option>Haircut + Beard - ₦15,000</option>
+<option>Kids Cut - ₦5,000</option>
+<option>Shave - ₦5,000</option>
+
+</select>
+
+<label>Preferred Date</label>
+
+<input
 type="date"
 id="date"
+>
 
-«»
+<label>Preferred Time</label>
 
-<label>
-Preferred Time
-</label><input
+<input
 type="time"
 id="time"
-
-«»
+>
 
 <button
 type="button"
 class="whatsapp-button"
 onclick="bookAppointment()"
-
-«»
-
+>
 📲 BOOK VIA WHATSAPP
+</button>
 
-</button></div></section><!-- CONTACT --><section class="container" id="contact"><div class="section-label">
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="container" id="contact">
+
+<div class="section-label">
 BLACK LABEL INFORMATION
-</div><h2 class="section-title">
+</div>
+
+<h2 class="section-title">
 We're Available
-</h2><div class="info-grid"><div class="info-card"><div class="icon">
-🏠
-</div><h3>
-Home Service
-</h3><p>
+</h2>
+
+<div class="info-grid">
+
+<div class="info-card">
+
+<div class="icon">🏠</div>
+
+<h3>Home Service</h3>
+
+<p>
 We come to you. Enjoy premium grooming
 from the comfort of your home.
-</p></div><div class="info-card"><div class="icon">
-🕐
-</div><h3>
-Opening Hours
-</h3><p>
-Every Day
-</p><p>
-8:00 AM – 8:00 PM
-</p></div><div class="info-card"><div class="icon">
-📱
-</div><h3>
-Contact
-</h3><p>
-WhatsApp
-</p><p>
-09159241163
-</p></div></div><div class="social"><a
+</p>
+
+</div>
+
+<div class="info-card">
+
+<div class="icon">🕐</div>
+
+<h3>Opening Hours</h3>
+
+<p>Every Day</p>
+
+<p>8:00 AM – 8:00 PM</p>
+
+</div>
+
+<div class="info-card">
+
+<div class="icon">📱</div>
+
+<h3>Contact</h3>
+
+<p>WhatsApp</p>
+
+<p>09159241163</p>
+
+</div>
+
+</div>
+
+
+<!-- SOCIAL MEDIA -->
+
+<div class="social">
+
+<a
 href="https://www.instagram.com/jstarly001"
 target="_blank"
-rel="noopener"
-
-«»
-
-Instagram @jstarly001
+rel="noopener noreferrer"
+>
+Instagram: @jstarly001
 </a>
 
 <a
 href="https://www.tiktok.com/@jstarly001"
 target="_blank"
-rel="noopener"
-
-«»
-
-TikTok @jstarly001
+rel="noopener noreferrer"
+>
+TikTok: @jstarly001
 </a>
 
-</div></section><!-- FOOTER --><footer><p>
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
 ©️ 2026 <strong>JSTARLY BLACK LABEL</strong>.
 All Rights Reserved.
-</p><p>
+</p>
+
+<p>
 Luxury Cuts • Grooming • Home Service
-</p></footer><!-- WHATSAPP BOOKING --><script>
+</p>
+
+</footer>
+
+
+<!-- WHATSAPP BOOKING FUNCTION -->
+
+<script>
 
 function bookAppointment(){
 
@@ -638,9 +707,7 @@ Preferred Time: ${time}
 Please confirm my appointment. Thank you.`;
 
 
-const whatsappNumber =
-"2349159241163";
-
+const whatsappNumber = "2349159241163";
 
 const whatsappURL =
 "https://wa.me/" +
@@ -649,12 +716,11 @@ whatsappNumber +
 encodeURIComponent(message);
 
 
-window.open(
-whatsappURL,
-"_blank"
-);
+window.open(whatsappURL, "_blank");
 
 }
 
-</script></body>
+</script>
+
+</body>
 </html>
